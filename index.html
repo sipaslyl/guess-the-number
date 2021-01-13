@@ -10,13 +10,37 @@
 
 			let guess = prompt("guess a number between 1 and 10");
 
-			if(num == guess)
-			{
-				alert("Got it!");
-			}else{
-				alert("Sorry!  You guessed " + guess + " and the number was " + num);
+			let gotIt = false;
+
+			let numGuesses = 0;
+
+			while(gotIt === false){
+
+				numGuesses++;
+
+				if(num == guess){
+
+					gotIt = true;//break out of loop
+
+				}
+				else{//continue since answer is incorrect
+
+					if(guess > num){//lower!
+						guess = prompt("Lower!");
+						
+					}
+					else{//higher
+						guess = prompt("Higher!");
+						
+					}
+					
+
+				}
+
 			}
 
+			alert("Got it! You guessed " + numGuesses + " times!");
+			//alert("Sorry!  You guessed " + guess + " and the number was " + num);
 
 		</script>
 	</body>
