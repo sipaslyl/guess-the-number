@@ -6,9 +6,10 @@
 		<h1>Guess the Number!</h1>
 		<script>
 
-			let num = Math.floor(Math.random() * 11);
+			//let num = Math.floor(Math.random() * 11);
+			let num = Math.floor(Math.random() * (100 + 1));
 
-			let guess = prompt("guess a number between 1 and 10");
+			let guess = prompt("guess a number between 1 and 100");
 
 			let gotIt = false;
 
@@ -40,7 +41,6 @@
 			}
 
 			alert("Got it! You guessed " + numGuesses + " times!");
-			//alert("Sorry!  You guessed " + guess + " and the number was " + num);
 
 		</script>
 	</body>
